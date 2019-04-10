@@ -1,7 +1,7 @@
 import requests
 import webbrowser
 
-api_key = "wTdsNpFtovzuN4I2Vo4xGU3SQLf8e5robl4oj9c6"
+api_key = "API-KEY"
 
 def myrequest():
     url = "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&camera=fhaz&api_key={api_key}"

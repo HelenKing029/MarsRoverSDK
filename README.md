@@ -3,6 +3,8 @@ Learning how to build my own SDK through the Mars Rover API.
 
 ## Getting Started
 
+This is a Python implementation of the NASA Mars Rover API.
+
 #### Install Python
 
 Download Python for your system 

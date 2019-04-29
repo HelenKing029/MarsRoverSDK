@@ -2,6 +2,7 @@ import requests
 import webbrowser
 import json
 
+api_key = "ENTER_YOUR_KEY"
 
 #Mars Rovers: Curiousity Opportunity Spirit
 

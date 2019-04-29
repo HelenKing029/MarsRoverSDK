@@ -2,17 +2,16 @@ import requests
 import webbrowser
 import json
 
-api_key = "ENTER_YOUR_KEY"
+
 #Mars Rovers: Curiousity Opportunity Spirit
-
-
 
 #Returns the most recent image from the Curiousity Rover with the front camera
 def mostRecentSolDateImage():
     url = "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=max_sol&camera=fhaz&api_key={}".format(api_key)
     myData = requests.get(url)
     json_dict = myData.json()
-    roverImage = json_dict["photos"][4]["img_src"]
+    roverImage = json_dict["photos"][5]["img_src"]
+    print("Opening Image...")
     return webbrowser.open_new_tab(roverImage)
 
 #Returns the Rovers Status
@@ -20,7 +19,7 @@ def roverMissionStatus(rover_name):
     url = "https://api.nasa.gov/mars-photos/api/v1/manifests/{}?api_key={}".format(rover_name, api_key)
     myData = requests.get(url).json()
     roverStatus= myData["photo_manifest"]["status"]
-    print(roverStatus)
+    print("The {} mission status is: {}".format(rover_name, roverStatus))
 
 #Getting the Mission Manifest from the chosen Rover
 def missionManifest(rover_name):
@@ -41,7 +40,7 @@ def customSearch(rover_name, solNum, camera):
     url = "https://api.nasa.gov/mars-photos/api/v1/rovers/{}/photos?sol={}&camera={}&api_key={}".format(rover_name, solNum, camera, api_key)
     myData = requests.get(url)
     json_dict = myData.json()
-    customSearchResult = json_dict["photos"][0]["img_src"]
+    customSearchResult = json_dict["photos"][5]["img_src"]
     print("Opening Image...")
     return webbrowser.open_new_tab(customSearchResult)
 
@@ -52,22 +51,27 @@ def missionSol(rover_name):
     solNum = []
     for i in myData["photo_manifest"]["photos"]:
         solNum.append(i[u"sol"])
+    print("List of Mission Sols:")
     print(solNum)
 
 #If totalPhotos is greater than X, print list of sol mission numbers
-def totalPhotosGreaterThan1000(rover_name):
+def totalPhotosGreaterThan(rover_name):
     url = "https://api.nasa.gov/mars-photos/api/v1/manifests/{}?api_key={}".format(rover_name, api_key)
     myData = requests.get(url).json()
     solNum = []
     for i in myData["photo_manifest"]["photos"]:
-        if int(i[u"total_photos"]) > 500:
+        if int(i[u"total_photos"]) > 800:
             solNum.append(i[u"sol"])
     print(solNum)
 
-totalPhotosGreaterThan1000("curiosity")
-#missionSol("curiosity")
-#totalPhotosGreaterThan1000("curiosity")
-#mostRecentSol("curiosity")
-#roverMissionStatus("opportunity")
-#mostRecentSolDateImage()
+
+## Functions Tested:
+#mostRecentSolDateImage() #working
+#roverMissionStatus("opportunity") #working
+#missionManifest("curiosity") #working
+#mostRecentSol("curiosity") #working
+#customSearch("curiosity", 797, "navcam") #working
+#missionSol("curiosity") #working
+#totalPhotosGreaterThan("curiosity") #working
+
 #"https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&camera=fhaz&api_key=ENTER_YOUR_KEY"

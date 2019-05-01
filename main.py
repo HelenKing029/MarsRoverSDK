@@ -9,11 +9,18 @@ api_key = "ENTER_YOUR_KEY"
 #Returns the most recent image from the Curiousity Rover with the front camera
 def mostRecentSolDateImage():
     url = "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=max_sol&camera=fhaz&api_key={}".format(api_key)
-    myData = requests.get(url)
-    json_dict = myData.json()
-    roverImage = json_dict["photos"][5]["img_src"]
+    myData = requests.get(url).json()
+    roverImage = myData["photos"][5]["img_src"]
     print("Opening Image...")
     return webbrowser.open_new_tab(roverImage)
+
+# Choose Rover, Sol, Camera to get the image results
+def customSearch(rover_name, solNum, camera):
+    url = "https://api.nasa.gov/mars-photos/api/v1/rovers/{}/photos?sol={}&camera={}&api_key={}".format(rover_name, solNum, camera, api_key)
+    myData = requests.get(url).json()
+    customSearchResult = myData["photos"][5]["img_src"]
+    print("Opening Image...")
+    return webbrowser.open_new_tab(customSearchResult)
 
 #Returns the Rovers Status
 def roverMissionStatus(rover_name):
@@ -35,15 +42,6 @@ def mostRecentSol(rover_name):
     myData = requests.get(url).json()
     recentSol = myData["photo_manifest"]["max_sol"]
     print("The most recent Mars sol is: {}".format(recentSol))
-
-# Choose Rover, Sol, Camera to get the image results
-def customSearch(rover_name, solNum, camera):
-    url = "https://api.nasa.gov/mars-photos/api/v1/rovers/{}/photos?sol={}&camera={}&api_key={}".format(rover_name, solNum, camera, api_key)
-    myData = requests.get(url)
-    json_dict = myData.json()
-    customSearchResult = json_dict["photos"][5]["img_src"]
-    print("Opening Image...")
-    return webbrowser.open_new_tab(customSearchResult)
 
 # Return a list of Sols
 def missionSol(rover_name):
@@ -67,7 +65,7 @@ def totalPhotosGreaterThan(rover_name):
 
 
 ## Functions Tested:
-#mostRecentSolDateImage() #working
+mostRecentSolDateImage() #working
 #roverMissionStatus("opportunity") #working
 #missionManifest("curiosity") #working
 #mostRecentSol("curiosity") #working

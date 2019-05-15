@@ -19,25 +19,54 @@ Mars Rover Documenation: https://api.nasa.gov/api.html#MarsPhotos
 ### Using the Functions
 
 **mostRecentSolDateImage** - Returns the most recent image from the Rover selected with the camera of choice. 
-(For best results Curiosity has the most image returns.) You will need to pass the parameters for the Rover name and the Camera you wish to use.
+(For best results Curiosity has the most image returns.) You will need to pass 2 parameters for the Rover name and the Camera you wish to use.
 
-Call Example:
+Example:
 ```   
 mostRecentSolDateImage("curiosity", "rhaz")
 ```
 In the example above you can see the Curiosity Rover was entered as the `rover_name` parameter and `rhaz` entered as the `camera` parameter. 
 
-**customSearch** - Customize your Search. The parameters you can set are the Rover, Sol, Camera. The result will show the image selected.
+**customSearch** - Customize your Search. This function takes 3 parameters. Yyou can set the Rover, Sol, and Camera. The result will show the appropriate image.
 
-**roverMissionStatus** - Returns the Rovers Status
+Example:
+```
+customSearch("curiosity", 797, "navcam")
+```
 
-**missionManifest** - Returns the Mission Manifest from the chosen Rover
+**roverMissionStatus** - Returns the Rovers Status. This function takes 1 parameter and is looking for the Rover name.
 
-**mostRecentSol** - Returns the Most Recent Sol from chosen Rover
+Example:
+```
+roverMissionStatus("opportunity")
+```
 
-**missionSol** - Returns every mission Sol number
+**missionManifest** - Returns the Mission Manifest from the chosen Rover.  This function takes 1 parameter and is looking for the Rover name.
 
-**totalPhotosGreaterThan** - Returns the sol missions that contain more than the set number of photos.
+Example:
+```missionManifest("curiosity")
+```
+
+**mostRecentSol** - Returns the Most Recent Sol from chosen Rover. This function takes 1 parameter and is looking for the Rover name.
+
+Example: 
+```
+mostRecentSol("curiosity")
+```
+
+**missionSol** - Returns every mission Sol number. This function takes 1 parameter and is looking for the Rover name.
+
+Example:
+```
+missionSol("curiosity")
+```
+
+**totalPhotosGreaterThan** - Returns the sol missions that contain more than the set number of photos. This function takes 1 parameter and is looking for the Rover name.
+
+Example:
+```
+totalPhotosGreaterThan("curiosity")
+```
 
 ### Mars Rovers
 These are the Rovers you can choose from:

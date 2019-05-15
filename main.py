@@ -9,10 +9,10 @@ base = "https://api.nasa.gov/mars-photos/api/v1/"
 #Mars Rovers: Curiousity Opportunity Spirit
 
 #Returns the most recent image from the Curiousity Rover with the front camera
-def mostRecentSolDateImage():
-    url = base + "rovers/curiosity/photos?sol=max_sol&camera=fhaz&api_key={}".format(api_key)
+def mostRecentSolDateImage(rover_name, camera):
+    url = base + "rovers/{}/photos?sol=max_sol&camera={}&api_key={}".format(rover_name, camera, api_key)
     myData = requests.get(url).json()
-    roverImage = myData["photos"][5]["img_src"]
+    roverImage = myData["photos"][0]["img_src"]
     print("Opening Image...")
     return webbrowser.open_new_tab(roverImage)
 
@@ -67,10 +67,10 @@ def totalPhotosGreaterThan(rover_name):
 
 
 ## Functions Tested:
-#mostRecentSolDateImage() #working
+mostRecentSolDateImage("curiosity", "rhaz") #working
 #roverMissionStatus("opportunity") #working
 #missionManifest("curiosity") #working
 #mostRecentSol("curiosity") #working
 #customSearch("curiosity", 797, "navcam") #working
 #missionSol("curiosity") #working
-totalPhotosGreaterThan("curiosity") #working
+#totalPhotosGreaterThan("curiosity") #working

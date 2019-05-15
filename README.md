@@ -25,7 +25,7 @@ Call Example:
 ```   
 mostRecentSolDateImage("curiosity", "rhaz")
 ```
-In the example above you can see the Curiosity Rover has been selected with the Rear Hazard Avoidance Camera selected. 
+In the example above you can see the Curiosity Rover was entered as the `rover_name` parameter and `rhaz` entered as the `camera` parameter. 
 
 **customSearch** - Choose Rover, Sol, Camera to get the image results
 

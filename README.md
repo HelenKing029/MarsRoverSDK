@@ -21,6 +21,17 @@ Mars Rover Documenation: https://api.nasa.gov/api.html#MarsPhotos
 **mostRecentSolDateImage** - Returns the most recent image from the Rover selected with the camera of choice. 
 For best results Curiosity has the most image returns. 
 
+```
+def mostRecentSolDateImage(rover_name, camera):
+    url = base + "rovers/{}/photos?sol=max_sol&camera={}&api_key={}".format(rover_name, camera, api_key)
+    myData = requests.get(url).json()
+    roverImage = myData["photos"][0]["img_src"]
+    print("Opening Image...")
+    return webbrowser.open_new_tab(roverImage)
+    
+mostRecentSolDateImage("curiosity", "rhaz")
+```
+
 **customSearch** - Choose Rover, Sol, Camera to get the image results
 
 **roverMissionStatus** - Returns the Rovers Status

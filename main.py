@@ -56,12 +56,12 @@ def missionSol(rover_name):
     print(solNum)
 
 #If totalPhotos is greater than X, print list of sol mission numbers
-def totalPhotosGreaterThan(rover_name):
+def totalPhotosGreaterThan(rover_name): #add total_photos
     url = base + "manifests/{}?api_key={}".format(rover_name, api_key)
     myData = requests.get(url).json()
     solNum = []
     for i in myData["photo_manifest"]["photos"]:
-        if int(i[u"total_photos"]) > 800:
+        if int(i[u"total_photos"]) > 800: ## change to total_photos
             solNum.append(i[u"sol"])
     print(solNum)
 

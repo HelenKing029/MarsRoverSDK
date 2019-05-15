@@ -27,7 +27,7 @@ mostRecentSolDateImage("curiosity", "rhaz")
 ```
 In the example above you can see the Curiosity Rover was entered as the `rover_name` parameter and `rhaz` entered as the `camera` parameter. 
 
-**customSearch** - Choose Rover, Sol, Camera to get the image results
+**customSearch** - Customize your Search. The parameters you can set are the Rover, Sol, Camera. The result will show the image selected.
 
 **roverMissionStatus** - Returns the Rovers Status
 
@@ -37,7 +37,7 @@ In the example above you can see the Curiosity Rover was entered as the `rover_n
 
 **missionSol** - Returns every mission Sol number
 
-**totalPhotosGreaterThan** - If totalPhotos is greater than X, print list of sol mission numbers
+**totalPhotosGreaterThan** - Returns the sol missions that contain more than the set number of photos.
 
 ### Mars Rovers
 These are the Rovers you can choose from:

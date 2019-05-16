@@ -44,7 +44,8 @@ roverMissionStatus("opportunity")
 **missionManifest** - Returns the Mission Manifest from the chosen Rover.  This function takes 1 parameter and is looking for the Rover name.
 
 Example:
-```missionManifest("curiosity")
+```
+missionManifest("curiosity")
 ```
 
 **mostRecentSol** - Returns the Most Recent Sol from chosen Rover. This function takes 1 parameter and is looking for the Rover name.

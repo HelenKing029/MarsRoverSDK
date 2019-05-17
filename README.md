@@ -19,7 +19,7 @@ Mars Rover Documenation: https://api.nasa.gov/api.html#MarsPhotos
 ### Using the Functions
 
 **mostRecentSolDateImage** - Returns the most recent image from the Rover selected with the camera of choice. 
-(For best results Curiosity has the most image returns.) You will need to pass 2 parameters for the Rover name and the Camera you wish to use.
+(For best results Curiosity has the most image returns.) You will need to pass 2 parameters for the Rover name and the Camera you wish to use. The randomPhoto function is run during photo selection which will return an image from the first 5 place holders in the data. 
 
 Example:
 ```   
@@ -27,7 +27,7 @@ mostRecentSolDateImage("curiosity", "rhaz")
 ```
 In the example above you can see the Curiosity Rover was entered as the `rover_name` parameter and `rhaz` entered as the `camera` parameter. 
 
-**customSearch** - Customize your Search. This function takes 3 parameters. Yyou can set the Rover, Sol, and Camera. The result will show the appropriate image.
+**customSearch** - Customize your Search. This function takes 3 parameters. Yyou can set the Rover, Sol, and Camera. The result will show the appropriate image. The randomPhoto function is run during photo selection which will return an image from the first 5 place holders in the data.
 
 Example:
 ```
@@ -62,11 +62,11 @@ Example:
 missionSol("curiosity")
 ```
 
-**totalPhotosGreaterThan** - Returns the sol missions that contain more than the set number of photos. This function takes 1 parameter and is looking for the Rover name.
+**totalPhotosGreaterThan** - Returns the sol missions that contain more than a set number of photos. This function takes 2 parameter and is looking for the Rover name and a number to use as the min number of photos.
 
 Example:
 ```
-totalPhotosGreaterThan("curiosity")
+totalPhotosGreaterThan("curiosity", 1000)
 ```
 
 ### Mars Rovers

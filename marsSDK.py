@@ -68,13 +68,3 @@ def totalPhotosGreaterThan(rover_name, total_photos): #add total_photos
         if int(i[u"total_photos"]) > total_photos:
             solNum.append(i[u"sol"])
     return(solNum)
-
-
-## Functions Tested:
-mostRecentSolDateImage("curiosity", "rhaz") #working
-#roverMissionStatus("opportunity") #working
-#missionManifest("curiosity") #working
-#mostRecentSol("curiosity") #working
-#customSearch("curiosity", 797, "navcam") #working
-#missionSol("curiosity") #working
-#totalPhotosGreaterThan("curiosity", 800) #working

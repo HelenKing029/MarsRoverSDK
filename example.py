@@ -9,9 +9,10 @@ config = ConfigParser()
 config.read('config.ini')
 api_key = config.get('auth','api_key')
 
-print(randomPhoto())
+
+#print(randomPhoto())
 ## Functions Tested:
-#mostRecentSolDateImage("curiosity", "fhaz") #working
+mostRecentSolDateImage("curiosity", "fhaz") #working
 #roverMissionStatus("opportunity") #working
 #missionManifest("curiosity") #working
 #mostRecentSol("curiosity") #working

@@ -8,6 +8,15 @@ base = "https://api.nasa.gov/mars-photos/api/v1/"
 
 #Mars Rovers: Curiousity Opportunity Spirit
 
+user_input = input("What function do you want to run? ")
+
+options = [mostRecentDolDateImage, customSearch, roverMissionStatus, missionManifest, mostRecentSol, missionSol, totalPhotosGreaterThan]
+
+def runFunction(user_input):
+    for fn in options:
+        if fn == selectedFn:
+            selectedFn()
+
 #Returns the most recent image from the Curiousity Rover with the front camera
 def mostRecentSolDateImage(rover_name, camera):
     url = base + "rovers/{}/photos?sol=max_sol&camera={}&api_key={}".format(rover_name, camera, api_key)
@@ -67,7 +76,7 @@ def totalPhotosGreaterThan(rover_name):
 
 
 ## Functions Tested:
-mostRecentSolDateImage("curiosity", "rhaz") #working
+#mostRecentSolDateImage("curiosity", "rhaz") #working
 #roverMissionStatus("opportunity") #working
 #missionManifest("curiosity") #working
 #mostRecentSol("curiosity") #working

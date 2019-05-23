@@ -2,15 +2,16 @@ import requests
 import webbrowser
 import json
 import random
-from marsSDK import mostRecentSolDateImage
+from marsSDK import randomPhoto, mostRecentSolDateImage
 
 from configparser import ConfigParser
 config = ConfigParser()
 config.read('config.ini')
 api_key = config.get('auth','api_key')
 
+print(randomPhoto())
 ## Functions Tested:
-mostRecentSolDateImage("curiosity", "fhaz") #working
+#mostRecentSolDateImage("curiosity", "fhaz") #working
 #roverMissionStatus("opportunity") #working
 #missionManifest("curiosity") #working
 #mostRecentSol("curiosity") #working

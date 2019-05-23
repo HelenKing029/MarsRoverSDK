@@ -3,7 +3,7 @@ import webbrowser
 import json
 import random
 
-api_key = "ENTER_YOUR_KEY"
+api_key = ""
 
 base = "https://api.nasa.gov/mars-photos/api/v1/"
 
@@ -68,3 +68,5 @@ def totalPhotosGreaterThan(rover_name, total_photos): #add total_photos
         if int(i[u"total_photos"]) > total_photos:
             solNum.append(i[u"sol"])
     return(solNum)
+
+#mostRecentSolDateImage("curiosity", "rhaz") #working

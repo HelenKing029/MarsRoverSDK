@@ -34,7 +34,7 @@ def customSearch(rover_name, solNum, camera):
 def roverMissionStatus(rover_name):
     url = base + "manifests/{}?api_key={}".format(rover_name, api_key)
     myData = requests.get(url).json()
-    roverStatus= myData.get("photo_manifest").get("status")
+    roverStatus= myData.get("photo_manifest") or {}.get("status")
     return("The {} mission status is: {}".format(rover_name, roverStatus))
 
 #Getting the Mission Manifest from the chosen Rover
@@ -61,7 +61,7 @@ def missionSol(rover_name):
     return("List of Mission Sols: {}".format(solNum))
 
 #If totalPhotos is greater than X, print list of sol mission numbers
-def totalPhotosGreaterThan(rover_name, total_photos): #add total_photos
+def totalPhotosGreaterThan(rover_name, total_photos):
     url = base + "manifests/{}?api_key={}".format(rover_name, api_key)
     myData = requests.get(url).json()
     solNum = []
@@ -74,7 +74,7 @@ def totalPhotosGreaterThan(rover_name, total_photos): #add total_photos
 #mostRecentSolDateImage("curiosity", "fhaz") #working
 #roverMissionStatus("opportunity") #working
 #missionManifest("curiosity") #working
-#mostRecentSol("curiosity") #working
-customSearch("curiosity", 797, "navcam") #working
+mostRecentSol("curiosity") #working
+#customSearch("curiosity", 797, "navcam") #working
 #missionSol("curiosity") #working
 #totalPhotosGreaterThan("curiosity", 800) #working

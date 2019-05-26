@@ -2,14 +2,9 @@ import requests
 import webbrowser
 import json
 import random
+from config import my_api_key
 
-#api_key = "wTdsNpFtovzuN4I2Vo4xGU3SQLf8e5robl4oj9c6"
-
-from configparser import ConfigParser
-config = ConfigParser()
-config.read('config.py')
-api_key = config.get('auth','api_key')
-
+api_key = my_api_key
 
 base = "https://api.nasa.gov/mars-photos/api/v1/"
 

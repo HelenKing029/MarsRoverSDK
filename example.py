@@ -3,8 +3,7 @@ import webbrowser
 import json
 import random
 import marsSDK
-
-
+import config
 
 #print(randomPhoto())
 ## Functions Tested:

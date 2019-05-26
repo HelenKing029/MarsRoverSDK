@@ -3,8 +3,13 @@ import webbrowser
 import json
 import random
 
+#api_key = "wTdsNpFtovzuN4I2Vo4xGU3SQLf8e5robl4oj9c6"
 
-api_key = "ENTER_YOUR_KEY"
+from configparser import ConfigParser
+config = ConfigParser()
+config.read('config.py')
+api_key = config.get('auth','api_key')
+
 
 base = "https://api.nasa.gov/mars-photos/api/v1/"
 
@@ -74,7 +79,7 @@ def totalPhotosGreaterThan(rover_name, total_photos):
 #mostRecentSolDateImage("curiosity", "fhaz") #working
 #roverMissionStatus("opportunity") #working
 #missionManifest("curiosity") #working
-mostRecentSol("curiosity") #working
+print(mostRecentSol("curiosity")) #working
 #customSearch("curiosity", 797, "navcam") #working
 #missionSol("curiosity") #working
 #totalPhotosGreaterThan("curiosity", 800) #working

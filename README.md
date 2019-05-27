@@ -16,6 +16,8 @@ Apply for your key here: https://api.nasa.gov/index.html#apply-for-an-api-key
 
 Mars Rover Documenation: https://api.nasa.gov/api.html#MarsPhotos
 
+Create your `config.py` file with the variable `my_api_key`. Assign your new API key, save and close that file. 
+
 ### Using the Functions
 
 **mostRecentSolDateImage** - Returns the most recent image from the Rover selected with the camera of choice. 

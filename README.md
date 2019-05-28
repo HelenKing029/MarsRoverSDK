@@ -18,7 +18,7 @@ Mars Rover Documenation: https://api.nasa.gov/api.html#MarsPhotos
 
 Create your `config.py` file with the variable `my_api_key`. Assign your new API key, save and close that file. 
 
-### Using the Functions
+### Calling the Functions
 
 **mostRecentSolDateImage** - Returns the most recent image from the Rover selected with the camera of choice. 
 (For best results Curiosity has the most image returns.) You will need to pass 2 parameters for the Rover name and the Camera you wish to use. The randomPhoto function is run during photo selection which will return an image from the first 5 place holders in the data. 

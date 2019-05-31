@@ -5,10 +5,12 @@ import random
 import marsSDK
 import config
 
+my_marsSDK_object = marsSDK.marsSDK()
+
 #print(randomPhoto())
 ## Functions Tested:
 #mostRecentSolDateImage("curiosity", "fhaz") #working
-marsSDK.roverMissionStatus("opportunity") #working
+print(my_marsSDK_object.roverMissionStatus("opportunity")) #working
 #missionManifest("curiosity") #working
 #mostRecentSol("curiosity") #working
 #customSearch("curiosity", 797, "navcam") #working

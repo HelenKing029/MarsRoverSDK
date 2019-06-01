@@ -1,16 +1,19 @@
 import requests
 import webbrowser
 import json
+import config
 import random
 import marsSDK
-import config
+
+
+my_marsSDK_object = marsSDK.marsSDK()
 
 #print(randomPhoto())
 ## Functions Tested:
-#mostRecentSolDateImage("curiosity", "fhaz") #working
-marsSDK.roverMissionStatus("opportunity") #working
-#missionManifest("curiosity") #working
-#mostRecentSol("curiosity") #working
-#customSearch("curiosity", 797, "navcam") #working
-#missionSol("curiosity") #working
-#print(totalPhotosGreaterThan("curiosity", 1000)) #working
+#my_marsSDK_object.mostRecentSolDateImage("curiosity", "fhaz")
+#print(my_marsSDK_object.roverMissionStatus("opportunity"))
+#my_marsSDK_object.missionManifest("curiosity")
+#my_marsSDK_object.mostRecentSol("curiosity")
+my_marsSDK_object.customSearch("curiosity", 780, "rhaz")
+#my_marsSDK_object.missionSol("curiosity")
+#print(my_marsSDK_object.totalPhotosGreaterThan("curiosity", 1000))

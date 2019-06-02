@@ -12,7 +12,8 @@ https://www.python.org/downloads/
 
 ### Running on Virtual Environment
 
-Run `source env/bin/activate` to activate the environment
+Run `source env/bin/activate` to activate the environment.
+
 To leave the environment enter `deactivate`. 
 
 Once you are running the environment you can then run the example file with `python3 example.py`.

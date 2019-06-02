@@ -31,13 +31,14 @@ class marsSDK():
         url = base + "rovers/{}/photos?sol={}&camera={}&api_key={}".format(rover_name, solNum, camera, api_key)
         myData = requests.get(url).json()
         customSearchResult = myData.get("photos")[self.randomPhoto()].get("img_src")
+        #add if image not available print"No image can be found"
         return webbrowser.open_new_tab(customSearchResult)
 
     #Returns the Rovers Status
     def roverMissionStatus(self, rover_name):
         url = base + "manifests/{}?api_key={}".format(rover_name, api_key)
         myData = requests.get(url).json()
-        roverStatus= myData.get("photo_manifest") or {}.get("status")
+        roverStatus= myData.get("photo_manifest").get("status")
         return("The {} mission status is: {}".format(rover_name, roverStatus))
 
     #Getting the Mission Manifest from the chosen Rover

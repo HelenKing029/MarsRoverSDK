@@ -41,7 +41,7 @@ In the example above you can see the Curiosity Rover was entered as the `rover_n
 
 Example:
 ```
-#my_marsSDK_object.customSearch("curiosity", 1000, "rhaz")
+my_marsSDK_object.customSearch("curiosity", 1000, "rhaz")
 ```
 
 **roverMissionStatus** - Returns the Rovers Status. This function takes 1 parameter and is looking for the Rover name.

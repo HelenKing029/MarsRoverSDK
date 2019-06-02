@@ -10,6 +10,13 @@ This is a Python implementation of the NASA Mars Rover API.
 Download Python for your system 
 https://www.python.org/downloads/
 
+### Running on Virtual Environment
+
+Run `source env/bin/activate` to activate the environment
+To leave the environment enter `deactivate`. 
+
+Once you are running the environment you can then run the example file with `python3 example.py`.
+
 ### Get an API Key
 
 Apply for your key here: https://api.nasa.gov/index.html#apply-for-an-api-key
@@ -25,7 +32,7 @@ Create your `config.py` file with the variable `my_api_key`. Assign your new API
 
 Example:
 ```   
-mostRecentSolDateImage("curiosity", "rhaz")
+my_marsSDK_object.mostRecentSolDateImage("curiosity", "fhaz")
 ```
 In the example above you can see the Curiosity Rover was entered as the `rover_name` parameter and `rhaz` entered as the `camera` parameter. 
 
@@ -33,42 +40,42 @@ In the example above you can see the Curiosity Rover was entered as the `rover_n
 
 Example:
 ```
-customSearch("curiosity", 797, "navcam")
+#my_marsSDK_object.customSearch("curiosity", 1000, "rhaz")
 ```
 
 **roverMissionStatus** - Returns the Rovers Status. This function takes 1 parameter and is looking for the Rover name.
 
 Example:
 ```
-roverMissionStatus("opportunity")
+print(my_marsSDK_object.roverMissionStatus("opportunity"))
 ```
 
 **missionManifest** - Returns the Mission Manifest from the chosen Rover.  This function takes 1 parameter and is looking for the Rover name.
 
 Example:
 ```
-missionManifest("curiosity")
+print(my_marsSDK_object.missionManifest("curiosity"))
 ```
 
 **mostRecentSol** - Returns the Most Recent Sol from chosen Rover. This function takes 1 parameter and is looking for the Rover name.
 
 Example: 
 ```
-mostRecentSol("curiosity")
+print(my_marsSDK_object.mostRecentSol("curiosity"))
 ```
 
 **missionSol** - Returns every mission Sol number. This function takes 1 parameter and is looking for the Rover name.
 
 Example:
 ```
-missionSol("curiosity")
+print(my_marsSDK_object.missionSol("curiosity"))
 ```
 
 **totalPhotosGreaterThan** - Returns the sol missions that contain more than a set number of photos. This function takes 2 parameter and is looking for the Rover name and a number to use as the min number of photos.
 
 Example:
 ```
-totalPhotosGreaterThan("curiosity", 1000)
+print(my_marsSDK_object.totalPhotosGreaterThan("curiosity", 1500))
 ```
 
 ### Mars Rovers

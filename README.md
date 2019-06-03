@@ -13,7 +13,8 @@ https://www.python.org/downloads/
 ### Install pip
 
 If using a Mac - Install pip if its not already on your machine. 
-```$ sudo easy_install pip
+```
+$ sudo easy_install pip
 $ sudo pip install --upgrade pip
 ```
 

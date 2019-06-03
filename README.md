@@ -10,21 +10,23 @@ This is a Python implementation of the NASA Mars Rover API.
 Download Python for your system 
 https://www.python.org/downloads/
 
-### Running on Virtual Environment
-
-Run `source env/bin/activate` to activate the environment.
-
-To leave the environment enter `deactivate`. 
-
-Once you are running the environment you can then run the example file with `python3 example.py`.
-
 ### Get an API Key
 
 Apply for your key here: https://api.nasa.gov/index.html#apply-for-an-api-key
 
 Mars Rover Documenation: https://api.nasa.gov/api.html#MarsPhotos
 
-Create your `config.py` file with the variable `my_api_key`. Assign your new API key, save and close that file. 
+### Running on Virtual Environment
+
+Run `source env/bin/activate` to activate the environment.
+
+To leave the environment enter `deactivate`. 
+
+To load the requests library enter `pip install requests --user`. 
+
+Create your `config.py` file with the variable `my_api_key = "Your_API_Key"`. Assign your new API key, save and close that file. 
+
+Once you are running the environment you can then run the example file with `python3 example.py`. It is currently default to the `mostRecentSolDateImage` function. 
 
 ### Calling the Functions
 

@@ -28,7 +28,7 @@ Create your `config.py` file with the variable `my_api_key = "Your_API_Key"`. As
 
 Once you are running the environment you can then run the example file with `python3 example.py`. It is currently default to the `mostRecentSolDateImage` function. 
 
-### Calling the Functions
+## Calling the Functions
 
 **mostRecentSolDateImage** - Returns the most recent image from the Rover selected with the camera of choice. 
 (For best results Curiosity has the most image returns.) You will need to pass 2 parameters for the Rover name and the Camera you wish to use. The randomPhoto function is run during photo selection which will return an image from the first 5 place holders in the data. 

@@ -10,6 +10,13 @@ This is a Python implementation of the NASA Mars Rover API.
 Download Python for your system 
 https://www.python.org/downloads/
 
+### Install pip
+
+If using a Mac - Install pip if its not already on your machine. 
+```$ sudo easy_install pip
+$ sudo pip install --upgrade pip
+```
+
 ### Get an API Key
 
 Apply for your key here: https://api.nasa.gov/index.html#apply-for-an-api-key

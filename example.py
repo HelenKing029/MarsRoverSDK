@@ -5,11 +5,12 @@ import config
 import random
 import marsSDK
 
-
 my_marsSDK_object = marsSDK.marsSDK()
 
+#Testing the RandomPhoto/Number generator: 
 #print(randomPhoto())
-## Functions Tested:
+
+## Example Functions:
 my_marsSDK_object.mostRecentSolDateImage("curiosity", "fhaz")
 #print(my_marsSDK_object.roverMissionStatus("opportunity"))
 #print(my_marsSDK_object.missionManifest("curiosity"))

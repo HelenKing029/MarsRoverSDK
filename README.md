@@ -1,5 +1,5 @@
 # Mars Rover SDK
-In this SDK you can choose from different Rovers, Cameras and Sol numbers to return different images and information from the Rovers.
+In this SDK you can choose from different Rovers, Cameras and Sol numbers (mission numbers) to return different images and information from the Rovers.
 
 ## Getting Started
 

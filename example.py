@@ -1,14 +1,6 @@
-import requests
-import webbrowser
-import json
-import config
-import random
 import marsSDK
 
-my_marsSDK_object = marsSDK.marsSDK()
-
-#Testing the RandomPhoto/Number generator: 
-#print(randomPhoto())
+my_marsSDK_object = marsSDK.MarsSDK()
 
 ## Example Functions:
 my_marsSDK_object.mostRecentSolDateImage("curiosity", "fhaz")

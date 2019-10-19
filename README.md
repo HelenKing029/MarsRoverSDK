@@ -20,9 +20,9 @@ $ sudo pip install --upgrade pip
 
 ### Get an API Key
 
-Apply for your key here: https://api.nasa.gov/index.html#apply-for-an-api-key
+Apply for your key here: https://api.nasa.gov/ Click on Generate API Key
 
-Mars Rover Documenation: https://api.nasa.gov/api.html#MarsPhotos
+Mars Rover Documenation: https://api.nasa.gov/ Click on Browse APIs and go to Mars Rover Photos
 
 ### Running on Virtual Environment
 
